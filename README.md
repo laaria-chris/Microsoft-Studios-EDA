@@ -1,5 +1,5 @@
-# Microsoft-Studios-EDA
-![microsoft_movie_logo](visuals_Data/microsoft_movie_logo.png)
+# MICROSOFT-STUDIO-EDA
+![microsoft_movie_logo](Visuals_Data/microsoft_movie_logo.png)
 
 
 #### Done by : LAARIA CHRIS
@@ -21,7 +21,7 @@ In the folder zippedData are movie datasets from:
 
   5.https://www.the-numbers.com/
 
-In our analysis we explore and answer the following questions:
+In this analysis we explore and answer the following questions:
 1. What are the most profitable movies and how much should you spend?
 2. What is the best time of the year to release a movie?
 3. How does the rating of the various genres of movies fair in IMDB data?
@@ -49,7 +49,7 @@ df_movie_budgets.head()
 ```
 We examine the overall trend of budget versus profit to see if there's any correlation.
 
-![BudgetVProfit](visuals_data/production-budgetvVSprofit.png)
+![BudgetVProfit](Visuals_Data/ProfitVSbudget.png)
 
 This scatter plot is helpful in beginning to understand how much money should be budgeted for a movie. The positive trend line indicates that an increase in the budget will result in an increase in profit.
 
@@ -60,7 +60,7 @@ profitable_ranked_df = profitable_movies_df.sort_values(by=['profit'], ascending
 profitable_ranked_df.reset_index(inplace=True)
 profitable_ranked_df.head()
 ```
-![BudgetVProfit](visuals_data/production-budgetvVSprofit.png)
+![BudgetVProfit](Visuals_Data/Top25ProfitableMovies.png)
 
 **Question 1 Conclusion:** Clearly the most successful 25 movies have both incredible profits and profit margins. Titanic (1997), Avatar, and Avengers: Endgame are the most successful movies in terms of sheer profit. Microsoft should budget \$60,000,000 for a movie and that budget should correlate with a profit margin of 55\%. 
 
@@ -68,19 +68,15 @@ profitable_ranked_df.head()
 We start by converting the dates from the `df_movie_budgets` dataframe to a datetime object.  We then do a count by month to see the number of movies released in each month.
 
 When grouping by month, we can select the `Profit`  so that we can see which months have the most financial success.
-![MarginByMonth](visuals/MarginByMonth.png)
+![ProfitVSMonth](Visuals_Data/ProitsVS-ReleaseMonth.png)
 
-Finally we plot the  profit by month for a small selection of genres.  We can see that there is a general trend amongst these genres for the profit in each month.
-
-![ProfitbyMonthbyGenre](visuals/ProfitbyMonthbyGenre.png)
-
-**Question 2 Conclusion:** We recommend that Microsoft release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). Adventure, Drama and Comedy movies would see similar success if released in November, but the recommendation remains to focus on summer.
+**Question 2 Conclusion:** We recommend that Microsoft release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). It appears that the summer months tend to result in greater success, perhaps as a result of an influx of children and their parents during summer break.
 
 ## Question 3: How does the rating of the various genres of movies fair in IMDB data?
 In this step we will be working with the IMDB sql database.We first begin by viewing the two tables movie_basics and movie_ratings into a pandas dataframe.
 Then use SQL query to obtain the data from the datasets and store them into a pandas dataframe Then w create a Line plot of the average rating vs the genre
 
-![MarginByMonth](visuals/)
+![MarginByMonth](Visuals_Data/AverageRatingVSgenre.png)
 
 From the above line plot it can be seen that the genre with the highest ratings are comedy, Documentary and FantasyMicrosoft Movie Studio should consider producing more content in genres like "Comedy/Documentary" and "Fantasy" as they have shown to be popular among audiences and have higher average ratings. By focusing on these genres, Microsoft can increase the chances of creating successful and well-received content.
 **Question 3 Conclusion:** We recommend that Microsoft release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). Adventure, Drama and Comedy movies would see similar success if released in November, but the recommendation remains to focus on summer.
@@ -88,10 +84,11 @@ From the above line plot it can be seen that the genre with the highest ratings 
 ## Question 4: Which movie directors and writers add value to the movie ratings?
 In this section we will try to determine how directors and writers create an impact on the value of the movie. This will be seen by trying to relate the directors and writers to the movie ratings.
 
-![MarginByMonth](visuals/)
+![VotesVStop10Directors](Visuals_Data/Top10Directors.png)
 
 The directors listed, such as Christopher Nolan, Quentin Tarantino, and Martin Scorsese, have garnered significant attention and praise from audiences, as indicated by the high number of votes received for their works. This suggests that these directors have a strong reputation and a dedicated fan base. Collaborating with renowned directors like these can enhance the credibility and appeal of the movies produced by Microsoft Movie Studio.I also did the same for the top writers below
 
+![VotesVStop10Writers](Visuals_Data/Top10Writers.png)
 
 The above are the top ten writers that microsoft should engage with.Partnering with top writers offers an opportunity for Microsoft Movie Studio to produce high-quality content that resonates with audiences. 
 
