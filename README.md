@@ -70,13 +70,18 @@ Finally we plot the  profit by month for a small selection of genres.  We can se
 
 ## Question 3: How does the rating of the various genres of movies fair in IMDB data?
 In this step we will be working with the IMDB sql database.We first begin by viewing the two tables movie_basics and movie_ratings into a pandas dataframe.
+Then use SQL query to obtain the data from the datasets and store them into a pandas dataframe Then w create a Line plot of the average rating vs the genre
 
-Then use SQL query to obtain the data from the datasets and store them into a pandas dataframe.
+![MarginByMonth](visuals/)
 
-![MarginByMonth](visuals/MarginByMonth.png)
+From the above line plot it can be seen that the genre with the highest ratings are comedy, Documentary and FantasyMicrosoft Movie Studio should consider producing more content in genres like "Comedy/Documentary" and "Fantasy" as they have shown to be popular among audiences and have higher average ratings. By focusing on these genres, Microsoft can increase the chances of creating successful and well-received content.
+**Question 3 Conclusion:** We recommend that Microsoft release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). Adventure, Drama and Comedy movies would see similar success if released in November, but the recommendation remains to focus on summer.
 
-Finally we plot the  profit by month for a small selection of genres.  We can see that there is a general trend amongst these genres for the profit in each month.
+## Question 3: How does the rating of the various genres of movies fair in IMDB data?
+In this step we will be working with the IMDB sql database.We first begin by viewing the two tables movie_basics and movie_ratings into a pandas dataframe.
+Then use SQL query to obtain the data from the datasets and store them into a pandas dataframe Then w create a Line plot of the average rating vs the genre
 
-![ProfitbyMonthbyGenre](visuals/ProfitbyMonthbyGenre.png)
+![MarginByMonth](visuals/)
 
+From the above line plot it can be seen that the genre with the highest ratings are comedy, Documentary and FantasyMicrosoft Movie Studio should consider producing more content in genres like "Comedy/Documentary" and "Fantasy" as they have shown to be popular among audiences and have higher average ratings. By focusing on these genres, Microsoft can increase the chances of creating successful and well-received content.
 **Question 3 Conclusion:** We recommend that Microsoft release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). Adventure, Drama and Comedy movies would see similar success if released in November, but the recommendation remains to focus on summer.
